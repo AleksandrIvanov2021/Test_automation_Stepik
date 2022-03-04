@@ -29,7 +29,6 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     product_page = ProductPage(browser, link)
     product_page.open()
     product_page.add_to_basket()
-    product_page.solve_quiz_and_get_code()
     product_page.should_not_be_success_message()
 
 
